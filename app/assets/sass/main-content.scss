@@ -1,0 +1,24 @@
+@import 'base/config';
+@import 'base/utilities';
+
+.main-content {
+  padding: 20px;
+
+  .greet-input {
+    @include border-radius(0);
+    width: 120px;
+  }
+
+  .btn-reset {
+    margin-left: 15px;
+  }
+
+  .title {
+    font-size: 22px;
+    margin-top: 10px;
+
+    .custom-message {
+      font-style: italic;
+    }
+  }
+}

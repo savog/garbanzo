@@ -1,0 +1,22 @@
+@import '../base/config';
+@import '../base/utilities';
+
+.header {
+  @include box-sizing(border-box);
+  background: $header-bg-color;
+  color: $white-color;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 20px;
+  width: 100%;
+
+  .logo {
+    background-image: url('/assets/images/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60px;
+    position: absolute;
+    top: 15px;
+    width: 60px;
+  }
+}

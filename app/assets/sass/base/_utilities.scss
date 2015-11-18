@@ -1,0 +1,34 @@
+@import 'config';
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-sizing($size) {
+  box-sizing: $size;
+  -moz-box-sizing: $size;
+  -webkit-box-sizing: $size;
+}
+
+@mixin linear-gradient($top-color, $bottom-color) {
+  background: $top-color;
+  background: -moz-linear-gradient(top, $top-color 0%, $bottom-color 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top-color), color-stop(100%, $bottom-color));
+  background: -webkit-linear-gradient(top, $top-color 0%, $bottom-color 100%);
+  background: -ms-linear-gradient(top, $top-color 0%, $bottom-color 100%);
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -moz-box-shadow: inset $top $left $blur $color;
+    -webkit-box-shadow: inset $top $left $blur $color;
+    box-shadow: inset $top $left $blur $color;
+  } @else {
+    -moz-box-shadow: $top $left $blur $color;
+    -webkit-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
