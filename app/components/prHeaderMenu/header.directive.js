@@ -1,6 +1,6 @@
-/* global: angular */
+import angular from 'angular';
 
-import template from './header.template.html!text';
+import template from './header.html!text';
 
 function prHeader() {
   let directive = {
@@ -9,7 +9,8 @@ function prHeader() {
   };
   return directive;
 }
+
 prHeader.$inject = ['$location', '$anchorScroll'];
 
-export default angular.module('prHeader', [])
+export default angular.module('prHeaderModule', [])
     .directive('prHeader', prHeader);

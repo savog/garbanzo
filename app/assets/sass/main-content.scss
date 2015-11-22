@@ -1,7 +1,10 @@
 @import 'base/config';
 @import 'base/utilities';
+@import 'base/flexbox';
 
 .main-content {
+  @include flexbox();
+  @include flex-direction(column);
   padding: 20px;
 
   .greet-input {
@@ -20,5 +23,9 @@
     .custom-message {
       font-style: italic;
     }
+  }
+
+  .angular-material-example {
+    margin-top: 35px;
   }
 }

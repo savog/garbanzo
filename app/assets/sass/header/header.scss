@@ -1,5 +1,6 @@
 @import '../base/config';
 @import '../base/utilities';
+@import '../base/flexbox';
 
 .header {
   @include box-sizing(border-box);

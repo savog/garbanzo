@@ -42,6 +42,7 @@
     "configFile": "app/jspm-config.js",
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.4.7",
+      "angular-material": "github:angular/bower-material@^0.11.4",
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
       "clean-css": "npm:clean-css@^3.4.8",
       "css": "github:systemjs/plugin-css@^0.1.19",

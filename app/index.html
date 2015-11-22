@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app" ng-cloak>
   <head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
     <title>::Perun::</title>
     <base href="/">
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
     <!-- build:js -->
     <script src="lib/system.js"></script>
     <script src="jspm-config.js"></script>
     <script>
-      System.import('main');
+      System.import('app');
     </script>
     <!-- endbuild -->
   </head>
 
-  <body data-main-app ng-cloak>
+  <body>
     <div class="main-wrap">
       <pr-header></pr-header>
       <pr-main-content></pr-main-content>
     </div>
   </body>
-
 </html>
