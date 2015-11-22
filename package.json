@@ -26,7 +26,6 @@
     "gulp-html-replace": "^1.5.4",
     "gulp-htmlmin": "^1.2.0",
     "gulp-jspm": "^0.5.4",
-    "gulp-load-plugins": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.0",
     "jspm": "^0.16.15",

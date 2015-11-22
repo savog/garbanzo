@@ -1,13 +1,14 @@
 var gulp = require('gulp'),
     connect = require('gulp-connect'),
     sass = require('gulp-sass'),
-    $ = require('gulp-load-plugins')(),
     del = require('del'),
     runSequence = require('run-sequence'),
     htmlreplace = require('gulp-html-replace'),
     rename = require('gulp-rename'),
     jspm = require('gulp-jspm'),
-    cachebust = new $.cachebust;
+    htmlmin = require('gulp-htmlmin'),
+    CacheBuster = require('gulp-cachebust'),
+    cachebust = new CacheBuster();
 
 gulp.task('dev-server', function() {
   connect.server({
@@ -66,7 +67,7 @@ gulp.task('build-app', ['jspm-build'], function() {
         'js': 'app.min.js'
     }))
     .pipe(cachebust.references())
-    .pipe($.htmlmin({
+    .pipe(htmlmin({
       collapseWhitespace: true,
       conservativeCollapse: true,
       minifyJS: true,
