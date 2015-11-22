@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
-    $ = require('gulp-load-plugins')(),
     connect = require('gulp-connect'),
     sass = require('gulp-sass'),
+    $ = require('gulp-load-plugins')(),
     del = require('del'),
     runSequence = require('run-sequence'),
     htmlreplace = require('gulp-html-replace'),
