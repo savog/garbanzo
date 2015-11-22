@@ -14,7 +14,7 @@
     "gulp": "gulp",
     "jspm": "jspm",
     "start": "gulp",
-    "distribution-build": "gulp distribution-build"
+    "dist": "gulp distribution-build"
   },
   "author": "",
   "license": "ISC",
