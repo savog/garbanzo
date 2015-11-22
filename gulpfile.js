@@ -13,7 +13,7 @@ gulp.task('dev-server', function() {
   connect.server({
     livereload: true,
     port: 8080,
-    root: 'app',
+    root: 'app'
   });
 });
 
