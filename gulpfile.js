@@ -6,22 +6,14 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     htmlreplace = require('gulp-html-replace'),
     rename = require('gulp-rename'),
-    replace = require('gulp-replace'),
     jspm = require('gulp-jspm'),
     cachebust = new $.cachebust;
 
-gulp.task('webserver', function() {
+gulp.task('dev-server', function() {
   connect.server({
     livereload: true,
     port: 8080,
     root: 'app',
-  });
-});
-
-gulp.task('prod-server', function() {
-  connect.server({
-    port: 8282,
-    root: 'dist',
   });
 });
 
@@ -51,7 +43,7 @@ gulp.task('watch',function() {
   gulp.watch(['./app/**/*.js'], ['js']);
 });
 
-gulp.task('default', ['sass', 'webserver', 'watch']);
+gulp.task('default', ['sass', 'dev-server', 'watch']);
 
 
 // Distribution tasks - START
@@ -89,14 +81,13 @@ gulp.task('build-app', ['jspm-build'], function() {
 // JSPM Bundle use versioning resources
 // (build all app in one file) and copy to ./dist folder
 gulp.task('jspm-build', function() {
-  return gulp.src('./app/main.js')
+  return gulp.src('./app/app.js')
     .pipe(jspm({
       selfExecutingBundle: true,
       minify: true
     }))
     .pipe(rename('app.min.js'))
     .pipe(cachebust.resources())
-    .pipe($.uglify())
     .pipe(gulp.dest('./dist'));
 });
 
@@ -119,5 +110,10 @@ gulp.task('copy-lib', function () {
     .pipe(gulp.dest('./dist/lib'));
 });
 
-
+gulp.task('prod-server', function() {
+  connect.server({
+    port: 8282,
+    root: 'dist',
+  });
+});
 // Build distribution package from ./app to ./dist - END
