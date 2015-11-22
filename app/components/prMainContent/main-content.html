@@ -1,0 +1,22 @@
+<div class="main-content">
+  <div class="hello-world">
+    <input class="greet-input" ng-model="mainController.message" />
+    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    <button ng-click="mainController.resetToDefault();"
+            type="button" class="btn-reset btn btn-primary" name="button primary">Reset</button>
+    <div class="title" id='greet'>Zdravo <span class="custom-message">{{mainController.message}}</span></div>
+  </div>
+
+  <div class="angular-material-example">
+    <h3>Angular material example</h3>
+    <md-checkbox aria-label="Finished?" ng-model="isChecked">
+      Finished ?
+    </md-checkbox>
+    <md-checkbox aria-label="No Ink Effects" md-no-ink ng-model="hasInk">
+      No Ink Effects
+    </md-checkbox>
+    <md-checkbox aria-label="Disabled" ng-disabled="true" ng-model="isDisabled">
+      Disabled
+    </md-checkbox>
+  </div>
+</div>
